@@ -1,5 +1,5 @@
 export default function Home() {
     return (
-        <h1>padley.tech</h1>
+        <h1 className="text-3xl font-bold">padley.tech</h1>
     )
 }
