@@ -4,7 +4,7 @@ import AboutMeCard from "@/components/about-me-card";
 export default function Home() {
     return (
         <div>
-            <MainTitle text="[jacob padley]" />
+            <MainTitle text="[JACOB PADLEY]" />
             <AboutMeCard />
         </div>
     )
