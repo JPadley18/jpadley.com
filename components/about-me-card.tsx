@@ -10,7 +10,7 @@ const robotoMono = Roboto_Mono({
 
 export default function AboutMeCard() {
     return (
-        <div className="grid grid-cols-2 gap-20 justify-center mt-20">
+        <div className="grid grid-cols-2 gap-32 justify-center mt-20">
             <div>
                 <Image alt="Photo of myself" src="/me.png" width="256" height="256" className="rounded-full ml-auto" />
             </div>
