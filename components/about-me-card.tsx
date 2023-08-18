@@ -10,15 +10,15 @@ const robotoMono = Roboto_Mono({
 
 export default function AboutMeCard() {
     return (
-        <div className="flex items-center justify-center">
-            <div className="flex min-w-max max-w-lg mt-32">
-                <Image alt="Photo of myself" src="/me.png" width="256" height="256" className="rounded-full" />
-                <div className={`${robotoMono.className} pl-32 text-2xl whitespace-nowrap max-w-sm align-middle"`}>
-                    <StatEntry text="Computer Science BSc (Hons)" icon={faGraduationCap} />
-                    <StatEntry text="Royal Holloway University of London" icon={faBuildingColumns} />
-                    <StatEntry text="JPadley18" icon={faGithub} />
-                    <StatEntry text="Jacob Padley" icon={faLinkedin} />
-                </div>
+        <div className="grid grid-cols-2 gap-20 justify-center mt-20">
+            <div>
+                <Image alt="Photo of myself" src="/me.png" width="256" height="256" className="rounded-full ml-auto" />
+            </div>
+            <div className={robotoMono.className}>
+                <StatEntry text="Computer Science BSc (Hons)" icon={faGraduationCap} />
+                <StatEntry text="Royal Holloway University of London" icon={faBuildingColumns} />
+                <StatEntry text="JPadley18" icon={faGithub} />
+                <StatEntry text="Jacob Padley" icon={faLinkedin} />
             </div>
         </div>
     )
