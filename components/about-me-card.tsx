@@ -17,8 +17,8 @@ export default function AboutMeCard() {
             <div className={`${robotoMono.className} pl-5 sm:pl-0`}>
                 <StatEntry text="Computer Science BSc (Hons)" icon={faGraduationCap} />
                 <StatEntry text="Royal Holloway University of London" icon={faBuildingColumns} />
-                <StatEntry text="JPadley18" icon={faGithub} />
-                <StatEntry text="Jacob Padley" icon={faLinkedin} />
+                <StatEntry text="JPadley18" href="https://github.com/JPadley18" icon={faGithub} />
+                <StatEntry text="Jacob Padley" href="https://www.linkedin.com/in/jacob-padley/" icon={faLinkedin} />
             </div>
         </div>
     )
