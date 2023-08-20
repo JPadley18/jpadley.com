@@ -1,12 +1,8 @@
 import Image from "next/image"
 import { faGraduationCap, faBuildingColumns } from "@fortawesome/free-solid-svg-icons"
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
-import { Roboto_Mono } from "next/font/google"
-import StatEntry from "./stat-entry";
-
-const robotoMono = Roboto_Mono({
-    subsets: ['latin'],
-});
+import { robotoMono } from "@/util/fonts"
+import StatEntry from "./stat-entry"
 
 export default function AboutMeCard() {
     return (

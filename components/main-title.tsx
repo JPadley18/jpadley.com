@@ -1,8 +1,4 @@
-import { Roboto_Mono } from "next/font/google"
-
-const robotoMono = Roboto_Mono({
-    subsets: ['latin'],
-});
+import { robotoMono } from "@/util/fonts"
 
 export default function MainTitle({ text }: { text: string }) {
     return (
