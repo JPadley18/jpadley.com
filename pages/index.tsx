@@ -13,7 +13,7 @@ export default function Home() {
             <Divider />
             <SubTitle text="My Projects" />
             <Project image="/cordle-thumb.png" width={934} height={684} title="Cordle"
-            description="Competitive Wordle bot for Discord. Complete with an elo system so you can prove that you're better than your friends once and for all."
+            description="Competitive Wordle bot for Discord. Complete with an elo system so that you can prove that you're better than your friends once and for all."
             href="/cordle" icons={[faGolang, faDocker, faNodeJs]} />
         </div>
     )
