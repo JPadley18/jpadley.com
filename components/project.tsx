@@ -11,7 +11,7 @@ export default function Project({ image, width, height, title, description, href
                 <Image src={image} alt="Project photo" width={width} height={height} className="object-cover w-full h-60 rounded-t-lg" />
                 <div className="p-5">
                     <h2 className={`${robotoMono.className} text-2xl sm:text-3xl font-bold`}>{title}</h2>
-                    <p className={`${robotoMono.className} text-md sm:text-lg text-slate-400 pt-2`}>{description}</p>
+                    <p className={`${robotoMono.className} text-md sm:text-lg text-slate-400 tracking-tight pt-2`}>{description}</p>
                     <ul className="pt-5">
                         {icons.map((icon) => (
                             <li key={icon.iconName} className="inline">
