@@ -4,10 +4,14 @@ import SubTitle from "@/components/sub-title"
 import Project from "@/components/project"
 import Divider from "@/components/divider"
 import { faDocker, faGolang, faNodeJs } from "@fortawesome/free-brands-svg-icons"
+import Head from "next/head"
 
 export default function Home() {
     return (
         <div>
+            <Head>
+                <title>Jacob Padley</title>
+            </Head>
             <MainTitle text="JACOB PADLEY" />
             <AboutMeCard />
             <Divider />
