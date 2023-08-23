@@ -12,7 +12,7 @@ export default function Home() {
             <AboutMeCard />
             <Divider />
             <SubTitle text="My Projects" />
-            <Project image="/me.png" title="Cordle" description="test" href="/cordle" icons={[faGolang, faJava, faPython]} />
+            <Project image="/cordle-thumb.png" width={934} height={684} title="Cordle" description="test" href="/cordle" icons={[faGolang, faJava, faPython]} />
         </div>
     )
 }
