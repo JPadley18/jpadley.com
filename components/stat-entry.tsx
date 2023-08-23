@@ -12,7 +12,7 @@ export default function StatEntry({ icon, text, href="" }: { icon: IconDefinitio
     }
 
     return (
-        <p className="pt-4 flex items-center text-xl">
+        <p className="pt-4 flex items-center text-lg sm:text-xl tracking-tight">
             <FontAwesomeIcon icon={icon} size="2x" style={{color:"#FFFFFF"}} className="pr-5" fixedWidth />
             {innerText}
         </p>
