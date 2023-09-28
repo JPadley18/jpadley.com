@@ -21,12 +21,12 @@ export default function Home() {
             <Project image="/toucan-thumb.png" width={1920} height={864} title="TouCan"
             description="Android app using OpenCV to identify a drinks can using the phone camera and send directions to a Lego Mindstorms robot to navigate to the can."
             href="/toucan" icons={[faJava, faAndroid]} />
-            <Project image="/cordle-thumb.png" width={934} height={684} title="DataIker Recognition"
+            <Project image="/dataiker-thumb.jpg" width={1242} height={932} title="DataIker Recognition"
             description="Software for the Raspberry Pi that uses machine learning and OpenCV to identify and greet office members by name using facial recognition."
-            href="/toucan" icons={[faPython, faRaspberryPi]} />
-            <Project image="/cordle-thumb.png" width={934} height={684} title="PyDrake"
+            href="/dataiker" icons={[faPython, faRaspberryPi]} />
+            <Project image="/pydrake-thumb.png" width={893} height={464} title="PyDrake"
             description="Python wrapper for the League of Legends API."
-            href="/toucan" icons={[faPython]} />
+            href="/pydrake" icons={[faPython]} />
         </div>
     )
 }
