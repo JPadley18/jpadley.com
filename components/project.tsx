@@ -1,13 +1,15 @@
 import Image from "next/image"
-import Link from "next/link"
 import { robotoMono } from "@/util/fonts"
 import { IconDefinition } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
+import ProjectModal from "./project-modal"
 
-export default function Project({ image, width, height, title, description, href, icons }: { image: string, width: number, height: number, title: string, description: string, href: string, icons: IconDefinition[] }) {
+export default function Project({ id, image, width, height, title, description, icons, modalProps }:
+    { id: string, image: string, width: number, height: number, title: string, description: string, icons: IconDefinition[], modalProps: {openModal: string | undefined, setOpenModal: React.Dispatch<React.SetStateAction<string | undefined>>} }) {
     return (
-        <div className="w-3/4 lg:w-1/2 xl:w-1/3 bg-slate-900 border border-gray-200 shadow-lg hover:scale-105 transition-transform shadow-gray-600 mx-auto mt-20 rounded-lg">
-                <Link href={href}>
+        <>
+            <ProjectModal modalName={id} modalTitle={title} modalContent={description} modalProps={modalProps} />
+            <div className="w-3/4 lg:w-1/2 xl:w-1/3 bg-slate-900 border border-gray-200 shadow-lg hover:scale-105 transition-transform shadow-gray-600 mx-auto mt-20 rounded-lg hover:cursor-pointer" onClick={() => modalProps.setOpenModal(id)}>
                 <Image src={image} alt="Project photo" width={width} height={height} className="object-cover w-full h-60 rounded-t-lg" />
                 <div className="p-5">
                     <h2 className={`${robotoMono.className} text-2xl sm:text-3xl font-bold`}>{title}</h2>
@@ -20,7 +22,7 @@ export default function Project({ image, width, height, title, description, href
                         ))}
                     </ul>
                 </div>
-            </Link>
-        </div>
+            </div>
+        </>
     )
 }
