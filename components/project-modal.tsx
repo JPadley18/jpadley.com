@@ -4,6 +4,12 @@ import Divider from "./divider";
 // Define custom styling for the Modal component
 const modalTheme: CustomFlowbiteTheme = {
     "modal": {
+        "root": {
+            "show": {
+                "on": "flex bg-gray-900 bg-opacity-90",
+                "off": "hidden"
+            },
+        },
         "content": {
             "inner": "relative rounded-lg bg-slate-900 shadow-lg shadow-gray-600 border border-gray-200 flex flex-col max-h-[90vh]"
         },
