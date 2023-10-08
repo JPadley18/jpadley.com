@@ -1,5 +1,7 @@
 import { CustomFlowbiteTheme, Flowbite, Modal } from "flowbite-react"
 import Divider from "./divider";
+import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 // Define custom styling for the Modal component
 const modalTheme: CustomFlowbiteTheme = {
@@ -20,12 +22,20 @@ const modalTheme: CustomFlowbiteTheme = {
     }
 };
 
-export default function ProjectModal({ modalName, modalTitle, modalContent, modalProps }:
-    { modalName: string, modalTitle: string, modalContent: string, modalProps: {openModal: string | undefined, setOpenModal: React.Dispatch<React.SetStateAction<string | undefined>>} }) {
+export default function ProjectModal({ modalName, modalTitle, modalContent, icons, gallery, links, modalProps }:
+    { modalName: string, modalTitle: string, modalContent: string, icons: IconDefinition[], gallery: string[], links: JSX.Element[],
+        modalProps: {openModal: string | undefined, setOpenModal: React.Dispatch<React.SetStateAction<string | undefined>>} }) {
     return (
         <Flowbite theme={{theme: modalTheme}}>
             <Modal dismissible show={modalProps.openModal === modalName} onClose={() => modalProps.setOpenModal("")}>
                 <Modal.Header>{modalTitle}</Modal.Header>
+                <ul className="pl-5">
+                    {icons.map((icon) => (
+                        <li key={icon.iconName} className="inline">
+                            <FontAwesomeIcon icon={icon} size="2x" className="pr-3" style={{color: "#FFFFFF"}} fixedWidth/>
+                        </li>
+                    ))}
+                </ul>
                 <hr className="my-3 mx-auto h-1 border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-50 w-1/2" />
                 <Modal.Body>
                     <div className="space-y-6">
