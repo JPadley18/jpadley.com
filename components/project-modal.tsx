@@ -1,7 +1,8 @@
-import { CustomFlowbiteTheme, Flowbite, Modal } from "flowbite-react"
-import Divider from "./divider";
+import { Carousel, CustomFlowbiteTheme, Flowbite, Modal } from "flowbite-react"
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import Image from "next/image"
+import ImageDefinition from "@/util/image-definition";
 
 // Define custom styling for the Modal component
 const modalTheme: CustomFlowbiteTheme = {
@@ -22,12 +23,30 @@ const modalTheme: CustomFlowbiteTheme = {
     }
 };
 
+function makeImage(image: ImageDefinition) {
+    return (
+        <Image src={image.path} alt={image.alt} width={image.width} height={image.height} className="relative" />
+    )
+}
+
+function makeGallery(gallery: ImageDefinition[]) {
+    if(gallery.length == 1) {
+        return makeImage(gallery[0]);
+    } else {
+        return (
+            <Carousel>
+                {gallery.map((img) => makeImage(img))}
+            </Carousel>
+        )
+    }
+}
+
 export default function ProjectModal({ modalName, modalTitle, modalContent, icons, gallery, links, modalProps }:
-    { modalName: string, modalTitle: string, modalContent: string, icons: IconDefinition[], gallery: string[], links: JSX.Element[],
+    { modalName: string, modalTitle: string, modalContent: string, icons: IconDefinition[], gallery: ImageDefinition[], links: JSX.Element[],
         modalProps: {openModal: string | undefined, setOpenModal: React.Dispatch<React.SetStateAction<string | undefined>>} }) {
     return (
         <Flowbite theme={{theme: modalTheme}}>
-            <Modal dismissible show={modalProps.openModal === modalName} onClose={() => modalProps.setOpenModal("")}>
+            <Modal dismissible show={modalProps.openModal === modalName} size="3xl" onClose={() => modalProps.setOpenModal("")}>
                 <Modal.Header>{modalTitle}</Modal.Header>
                 <ul className="pl-5">
                     {icons.map((icon) => (
@@ -38,8 +57,17 @@ export default function ProjectModal({ modalName, modalTitle, modalContent, icon
                 </ul>
                 <hr className="my-3 mx-auto h-1 border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-50 w-1/2" />
                 <Modal.Body>
+                    <div className="mb-5">
+                        {makeGallery(gallery)}
+                    </div>
                     <div className="space-y-6">
                         {modalContent}
+                    </div>
+                    <hr className="my-3 mx-auto h-1 border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-50 w-1/2" />
+                    <div>
+                        <ul className="py-2">
+                            {links.map((link) => link)}
+                        </ul>
                     </div>
                 </Modal.Body>
             </Modal>

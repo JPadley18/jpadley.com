@@ -21,15 +21,44 @@ export default function Home() {
 
             <SubTitle text="My Projects" />
 
-            <Project id="cordle" image="/cordle-thumb.png" width={934} height={684} title="Cordle"
+            <Project id="cordle" thumbnail={{
+                path: "/cordle-thumb.png",
+                alt: "Cordle project photo",
+                width: 934,
+                height: 684
+            }}
+            title="Cordle"
             description="Competitive Wordle bot for Discord. Complete with an elo system so that you can prove that you're better than your friends once and for all."
             longDescription="test long description"
-            gallery={[]}
-            links={[]}
+            gallery={[
+                {
+                    path: "/cordle-thumb.png",
+                    alt: "Cordle interface example",
+                    width: 934,
+                    height: 684
+                },
+                {
+                    path: "/cordle-thumb.png",
+                    alt: "Cordle interface example",
+                    width: 934,
+                    height: 684
+                }
+            ]}
+            links={[
+                <a href="amongus">
+                    hello
+                </a>
+            ]}
             icons={[faGolang, faDocker, faNodeJs]}
             modalProps={modalProps} />
 
-            <Project id="padley-tech" image="/padley-tech-thumb.jpg" width={690} height={369} title="padley.tech"
+            <Project id="padley-tech" thumbnail={{
+                path: "/padley-tech-thumb.jpg",
+                alt: "padley.tech project photo",
+                width: 690,
+                height: 369
+            }}
+            title="padley.tech"
             description="This website was created in TypeScript using React with Next.js and Tailwind CSS."
             longDescription="test long description"
             gallery={[]}
@@ -37,7 +66,13 @@ export default function Home() {
             icons={[faJs, faReact]}
             modalProps={modalProps} />
 
-            <Project id="turtle" image="/turtle-thumb.jpg" width={1243} height={932} title="Turtle Printer"
+            <Project id="turtle" thumbnail={{
+                path: "/turtle-thumb.jpg",
+                alt: "Turtle printer project photo",
+                width: 1243,
+                height: 932
+            }}
+            title="Turtle Printer"
             description="A software I created to for new students joining the Royal Holloway Computing Society. It allows new programmers to write Python code that draws images using the Turtle library and print their creations on a thermal receipt printer."
             longDescription="test long description"
             gallery={[]}
@@ -45,7 +80,13 @@ export default function Home() {
             icons={[faPython, faRaspberryPi]}
             modalProps={modalProps} />
 
-            <Project id="toucan" image="/toucan-thumb.jpg" width={947} height={426} title="TouCan"
+            <Project id="toucan" thumbnail={{
+                path: "/toucan-thumb.jpg",
+                alt: "TouCan project photo",
+                width: 947,
+                height: 426
+            }}
+            title="TouCan"
             description="Android app using OpenCV to identify a drinks can using the phone camera and send directions to a Lego Mindstorms robot to navigate to the can."
             longDescription="test long description"
             gallery={[]}
@@ -53,7 +94,13 @@ export default function Home() {
             icons={[faJava, faAndroid]}
             modalProps={modalProps} />
 
-            <Project id="dataiker" image="/dataiker-thumb.jpg" width={1242} height={932} title="DataIker Facial Recognition"
+            <Project id="dataiker" thumbnail={{
+                path: "/dataiker-thumb.jpg",
+                alt: "DataIker Facial Recognition project photo",
+                width: 1242,
+                height: 932
+            }}
+            title="DataIker Facial Recognition"
             description="My machine learning project created during my work experience at Data Iku. Software for the Raspberry Pi that uses machine learning and OpenCV to identify and greet office members by name using facial recognition."
             longDescription="test long description"
             gallery={[]}
