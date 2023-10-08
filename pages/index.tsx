@@ -45,7 +45,7 @@ export default function Home() {
                 }
             ]}
             links={[
-                <a href="amongus">
+                <a key="amogus" href="amongus">
                     hello
                 </a>
             ]}
