@@ -1,8 +1,7 @@
 import { Carousel, CustomFlowbiteTheme, Flowbite, Modal } from "flowbite-react"
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import Image from "next/image"
-import ImageDefinition from "@/util/image-definition";
+import Image, { StaticImageData } from "next/image"
 
 // Define custom styling for the Modal component
 const modalTheme: CustomFlowbiteTheme = {
@@ -23,13 +22,13 @@ const modalTheme: CustomFlowbiteTheme = {
     }
 };
 
-function makeImage(image: ImageDefinition) {
+function makeImage(image: StaticImageData) {
     return (
-        <Image src={image.path} alt={image.alt} width={image.width} height={image.height} className="relative object-cover w-full sm:w-2/3 h-70 rounded-xl" />
+        <Image key={image.src} src={image} alt="Carousel image" placeholder="blur" className="relative object-cover w-full sm:w-2/3 h-70 rounded-xl" />
     )
 }
 
-function makeGallery(gallery: ImageDefinition[]) {
+function makeGallery(gallery: StaticImageData[]) {
     if(gallery.length == 0) {
         return;
     } else if(gallery.length == 1) {
@@ -44,7 +43,7 @@ function makeGallery(gallery: ImageDefinition[]) {
 }
 
 export default function ProjectModal({ modalName, modalTitle, modalContent, icons, gallery, links, modalProps }:
-    { modalName: string, modalTitle: string, modalContent: string, icons: IconDefinition[], gallery: ImageDefinition[], links: JSX.Element[],
+    { modalName: string, modalTitle: string, modalContent: string, icons: IconDefinition[], gallery: StaticImageData[], links: JSX.Element[],
         modalProps: {openModal: string | undefined, setOpenModal: React.Dispatch<React.SetStateAction<string | undefined>>} }) {
     return (
         <Flowbite theme={{theme: modalTheme}}>

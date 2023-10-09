@@ -9,6 +9,12 @@ import { faLink } from "@fortawesome/free-solid-svg-icons"
 import StatEntry from "@/components/stat-entry"
 import Head from "next/head"
 
+import cordleThumbnail from "@/public/cordle-thumb.png"
+import padleyThumbnail from "@/public/padley-tech-thumb.jpg"
+import turtleThumbnail from "@/public/turtle-thumb.jpg"
+import toucanThumbnail from "@/public/toucan-thumb.jpg"
+import dataikerThumbnail from "@/public/dataiker-thumb.jpg"
+
 export default function Home() {
     // Track the currently open modal dialog for the page
     const [ openModal, setOpenModal ] = React.useState<string | undefined>();
@@ -31,12 +37,7 @@ export default function Home() {
 
             <SubTitle text="My Projects" />
 
-            <Project id="cordle" thumbnail={{
-                path: "/cordle-thumb.png",
-                alt: "Cordle project photo",
-                width: 934,
-                height: 684
-            }}
+            <Project id="cordle" thumbnail={cordleThumbnail}
             title="Cordle"
             description="Competitive Wordle bot for Discord. Complete with an elo system so that you can prove that you're better than your friends once and for all."
             longDescription="Cordle began as a project for Royal Hackaway V6, a 24-hour hackathon event run by the Royal Holloway Computing Society. It consists of a Discord Bot which, 
@@ -48,20 +49,7 @@ export default function Home() {
             <br>
             Cordle was originally written in NodeJS using a Firebase database, and after Royal Hackaway I worked with another member of the original team to re-make Cordle using Go with 
             a MySQL database, which greatly increased the performance of the bot. We containerised the project with Docker and hosted it, finally creating a stable release version of Cordle."
-            gallery={[
-                {
-                    path: "/cordle-thumb.png",
-                    alt: "Cordle interface example",
-                    width: 934,
-                    height: 684
-                },
-                {
-                    path: "/cordle-thumb.png",
-                    alt: "Cordle interface example",
-                    width: 934,
-                    height: 684
-                }
-            ]}
+            gallery={[cordleThumbnail, cordleThumbnail]}
             links={[
                 <StatEntry key="github" icon={faGithub} text="Cordle GitHub" href="https://github.com/cordle-bot/cordle-bot" />,
                 <StatEntry key="devpost" icon={faLink} text="Hackaway Devpost Page" href="https://devpost.com/software/cordle" />,
@@ -70,29 +58,19 @@ export default function Home() {
             icons={[faGolang, faDocker, faNodeJs]}
             modalProps={modalProps} />
 
-            <Project id="padley-tech" thumbnail={{
-                path: "/padley-tech-thumb.jpg",
-                alt: "padley.tech project photo",
-                width: 690,
-                height: 369
-            }}
+            <Project id="padley-tech" thumbnail={padleyThumbnail}
             title="padley.tech"
             description="This website was created in TypeScript using React with Next.js and Tailwind CSS."
             longDescription="This is the very website you are currently viewing! I began work on this website both as a way to document my programming projects and 
             to learn how to use React. This website uses React with Next.JS, as well as Tailwind CSS and Flowbite JS for styling."
-            gallery={[]}
+            gallery={[padleyThumbnail]}
             links={[
                 <StatEntry key="github" icon={faGithub} text="padley.tech GitHub" href="https://github.com/JPadley18/padley.tech" />
             ]}
             icons={[faJs, faReact]}
             modalProps={modalProps} />
 
-            <Project id="turtle" thumbnail={{
-                path: "/turtle-thumb.jpg",
-                alt: "Turtle printer project photo",
-                width: 1243,
-                height: 932
-            }}
+            <Project id="turtle" thumbnail={turtleThumbnail}
             title="Turtle Printer"
             description="A software I created to for new students joining the Royal Holloway Computing Society. It allows new programmers to write Python code that draws images using the Turtle library and print their creations on a thermal receipt printer."
             longDescription="Turtle Printer is a software written in Python using Tkinter as an extension to the popular Python Turtle library, which provides an easy, beginner 
@@ -107,7 +85,7 @@ export default function Home() {
             <br>
             Once the user has created their image, they can submit it. It is then sent over Wi-Fi to a Raspberry Pi that in turn sends the image to a thermal receipt printer, 
             which allowed the freshers to take home their drawings."
-            gallery={[]}
+            gallery={[turtleThumbnail]}
             links={[
                 <StatEntry key="github" icon={faGithub} text="Turtle Printer GitHub" href="https://github.com/rhul-compsoc/turtle-printer" />,
                 <StatEntry key="server-github" icon={faGithub} text="Server GitHub" href="https://github.com/rhul-compsoc/turtle-printer-server" />
@@ -115,12 +93,7 @@ export default function Home() {
             icons={[faPython, faRaspberryPi]}
             modalProps={modalProps} />
 
-            <Project id="toucan" thumbnail={{
-                path: "/toucan-thumb.jpg",
-                alt: "TouCan project photo",
-                width: 947,
-                height: 426
-            }}
+            <Project id="toucan" thumbnail={toucanThumbnail}
             title="TouCan"
             description="Android app using OpenCV to identify a drinks can using the phone camera and send directions to a Lego Mindstorms robot to navigate to the can."
             longDescription="I created the TouCan app as part of a group coursework project in which we were tasked with programming a Lego Mindstorms robot using Java. 
@@ -131,19 +104,14 @@ export default function Home() {
             of the visible blobs of colour and sends the screen coordinates of its center to the robot over a Wi-Fi connection. The robot will then move left or right in 
             order to keep the center of the can in the center of the camera, while moving forwards towards the can. Eventually, the robot detects the can touching the claw 
             and closes, capturing the can."
-            gallery={[]}
+            gallery={[toucanThumbnail]}
             links={[
                 <StatEntry key="github" icon={faGithub} text="TouCan GitHub" href="https://github.com/JPadley18/TouCan" />
             ]}
             icons={[faJava, faAndroid]}
             modalProps={modalProps} />
 
-            <Project id="dataiker" thumbnail={{
-                path: "/dataiker-thumb.jpg",
-                alt: "DataIker Facial Recognition project photo",
-                width: 1242,
-                height: 932
-            }}
+            <Project id="dataiker" thumbnail={dataikerThumbnail}
             title="DataIker Facial Recognition"
             description="My machine learning project created during my work experience at Data Iku. Software for the Raspberry Pi that uses machine learning and OpenCV to identify and greet office members by name using facial recognition."
             longDescription="I created this project during my work experience at data science company DataIku. It consists of a Raspberry Pi that uses OpenCV and an onboard 
@@ -153,7 +121,7 @@ export default function Home() {
             <br>
             If the device is not in 'learning' mode, it will instead use an API endpoint on DSS 
             to attempt to identify any office member that walks past the camera, and greet them by name on the LCD screen attached to the Pi."
-            gallery={[]}
+            gallery={[dataikerThumbnail]}
             links={[
                 <StatEntry key="github" icon={faGithub} text="Project GitHub" href="https://github.com/JPadley18/dataiker-recognition" />
             ]}
