@@ -63,7 +63,7 @@ export default function ProjectModal({ modalName, modalTitle, modalContent, icon
                         {makeGallery(gallery)}
                     </div>
                     <div className="space-y-6">
-                        {modalContent.split("<br>").map((line) => <p>{line}</p>)}
+                        {modalContent.split("<br>").map((line, i) => <p key={i.toString()}>{line}</p>)}
                     </div>
                     <hr className="my-3 mx-auto h-1 border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-50 w-1/2" />
                     <div>
