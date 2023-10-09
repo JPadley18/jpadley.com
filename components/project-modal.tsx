@@ -25,7 +25,7 @@ const modalTheme: CustomFlowbiteTheme = {
 
 function makeImage(image: ImageDefinition) {
     return (
-        <Image src={image.path} alt={image.alt} width={image.width} height={image.height} className="relative object-cover w-2/3 h-70 rounded-xl" />
+        <Image src={image.path} alt={image.alt} width={image.width} height={image.height} className="relative object-cover w-full sm:w-2/3 h-70 rounded-xl" />
     )
 }
 
