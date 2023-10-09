@@ -7,6 +7,7 @@ import React from "react"
 import { faDocker, faGolang, faNodeJs, faRaspberryPi, faPython, faJava, faAndroid, faJs, faReact, faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faLink } from "@fortawesome/free-solid-svg-icons"
 import StatEntry from "@/components/stat-entry"
+import Head from "next/head"
 
 export default function Home() {
     // Track the currently open modal dialog for the page
@@ -15,6 +16,13 @@ export default function Home() {
 
     return (
         <div>
+            <Head>
+                <title>Jacob Padley</title>
+                <meta property="og:title" content="Jacob Padley" key="title" />
+                <meta property="descripton" content="Full-Stack developer. My personal portfolio website." key="description" />
+                <meta property="og:descripton" content="Full-Stack developer. My personal portfolio website." key="og-description" />
+            </Head>
+
             <MainTitle text="JACOB PADLEY" />
 
             <AboutMeCard />
