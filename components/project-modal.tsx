@@ -30,7 +30,9 @@ function makeImage(image: ImageDefinition) {
 }
 
 function makeGallery(gallery: ImageDefinition[]) {
-    if(gallery.length == 1) {
+    if(gallery.length == 0) {
+        return;
+    } else if(gallery.length == 1) {
         return makeImage(gallery[0]);
     } else {
         return (
@@ -46,7 +48,7 @@ export default function ProjectModal({ modalName, modalTitle, modalContent, icon
         modalProps: {openModal: string | undefined, setOpenModal: React.Dispatch<React.SetStateAction<string | undefined>>} }) {
     return (
         <Flowbite theme={{theme: modalTheme}}>
-            <Modal dismissible show={modalProps.openModal === modalName} size="3xl" onClose={() => modalProps.setOpenModal("")}>
+            <Modal dismissible show={modalProps.openModal === modalName} size="4xl" onClose={() => modalProps.setOpenModal(undefined)}>
                 <Modal.Header>{modalTitle}</Modal.Header>
                 <ul className="pl-5">
                     {icons.map((icon) => (
@@ -61,7 +63,7 @@ export default function ProjectModal({ modalName, modalTitle, modalContent, icon
                         {makeGallery(gallery)}
                     </div>
                     <div className="space-y-6">
-                        {modalContent}
+                        {modalContent.split("<br>").map((line) => <p>{line}</p>)}
                     </div>
                     <hr className="my-3 mx-auto h-1 border-t-0 bg-transparent bg-gradient-to-r from-transparent via-neutral-500 to-transparent opacity-50 w-1/2" />
                     <div>
