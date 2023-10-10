@@ -10,6 +10,8 @@ import StatEntry from "@/components/stat-entry"
 import Head from "next/head"
 
 import cordleThumbnail from "@/public/cordle-thumb.png"
+import cordleCarousel1 from "@/public/cordle-1.jpg"
+import cordleCarousel2 from "@/public/cordle-2.jpg"
 import padleyThumbnail from "@/public/padley-tech-thumb.jpg"
 import turtleThumbnail from "@/public/turtle-thumb.jpg"
 import toucanThumbnail from "@/public/toucan-thumb.jpg"
@@ -49,7 +51,7 @@ export default function Home() {
             <br>
             Cordle was originally written in NodeJS using a Firebase database, and after Royal Hackaway I worked with another member of the original team to re-make Cordle using Go with 
             a MySQL database, which greatly increased the performance of the bot. We containerised the project with Docker and hosted it, finally creating a stable release version of Cordle."
-            gallery={[cordleThumbnail, cordleThumbnail]}
+            gallery={[cordleThumbnail, cordleCarousel1, cordleCarousel2]}
             links={[
                 <StatEntry key="github" icon={faGithub} text="Cordle GitHub" href="https://github.com/cordle-bot/cordle-bot" />,
                 <StatEntry key="devpost" icon={faLink} text="Hackaway Devpost Page" href="https://devpost.com/software/cordle" />,
