@@ -1,9 +1,9 @@
 import Image from "next/image"
-import { faGraduationCap, faBuildingColumns } from "@fortawesome/free-solid-svg-icons"
+import { faGraduationCap, faBuildingColumns, faBriefcase } from "@fortawesome/free-solid-svg-icons"
 import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons"
 import { robotoMono } from "@/util/fonts"
 import StatEntry from "./stat-entry"
-import profileImg from "@/public/me.png"
+import profileImg from "@/public/me.jpg"
 
 export default function AboutMeCard() {
     return (
@@ -12,6 +12,7 @@ export default function AboutMeCard() {
                 <Image alt="Photo of myself" placeholder="blur" src={profileImg} className="rounded-full shadow-md shadow-gray-600 mx-auto md:ml-auto md:mr-0" />
             </div>
             <div className={`${robotoMono.className} pl-5 md:pl-0`}>
+                <StatEntry text="Software Engineering Intern @ IBM UK" icon={faBriefcase} />
                 <StatEntry text="Studying for Computer Science BSc (Hons)" icon={faGraduationCap} />
                 <StatEntry text="Royal Holloway University of London" icon={faBuildingColumns} />
                 <StatEntry text="JPadley18" href="https://github.com/JPadley18" icon={faGithub} />
