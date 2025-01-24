@@ -61,13 +61,13 @@ export default function Home() {
             modalProps={modalProps} />
 
             <Project id="padley-tech" thumbnail={padleyThumbnail}
-            title="padley.tech"
+            title="jpadley.com"
             description="This website was created in TypeScript using React with Next.js and Tailwind CSS."
             longDescription="This is the very website you are currently viewing! I began work on this website both as a way to document my programming projects and 
             to learn how to use React. This website uses React with Next.JS, as well as Tailwind CSS and Flowbite JS for styling."
             gallery={[padleyThumbnail]}
             links={[
-                <StatEntry key="github" icon={faGithub} text="padley.tech GitHub" href="https://github.com/JPadley18/padley.tech" />
+                <StatEntry key="github" icon={faGithub} text="jpadley.com GitHub" href="https://github.com/JPadley18/jpadley.com" />
             ]}
             icons={[faJs, faReact]}
             modalProps={modalProps} />
