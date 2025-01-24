@@ -4,6 +4,8 @@ import { IconDefinition } from "@fortawesome/free-brands-svg-icons"
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import ProjectModal from "./project-modal"
 
+import type { JSX } from "react";
+
 export default function Project({ id, thumbnail, title, description, longDescription, gallery, links, icons, modalProps }:
     { id: string, thumbnail: StaticImageData, title: string, description: string,
         longDescription: string, gallery: StaticImageData[], links: JSX.Element[], icons: IconDefinition[],

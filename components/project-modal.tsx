@@ -3,6 +3,8 @@ import { IconDefinition } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import Image, { StaticImageData } from "next/image"
 
+import type { JSX } from "react";
+
 // Define custom styling for the Modal component
 const modalTheme: CustomFlowbiteTheme = {
     "modal": {

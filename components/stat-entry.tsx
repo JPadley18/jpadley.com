@@ -1,6 +1,8 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome"
 import { IconDefinition } from "@fortawesome/free-solid-svg-icons"
 
+import type { JSX } from "react";
+
 export default function StatEntry({ icon, text, href="" }: { icon: IconDefinition,text: string, href?: string }) {
     let innerText: JSX.Element|string
     if(href != "") {
