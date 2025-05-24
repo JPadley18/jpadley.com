@@ -10,11 +10,11 @@ module.exports = {
   ],
   theme: {
     colors: {
-    'text': '#40362b',
-    'background': '#f7ecbf',
-    'primary': '#c14633',
-    'secondary': '#e6ad28',
-    'accent': '#7fbda3',
+      'text': '#40362b',
+      'background': '#f7ecbf',
+      'primary': '#c14633',
+      'secondary': '#e6ad28',
+      'accent': '#7fbda3',
     },
   },
   plugins: [

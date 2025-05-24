@@ -9,3 +9,21 @@
     --color-background: #f7ecbf;
     --color-text: #40362b;
 }
+
+@layer utilities {
+  .bg-retro-stripes {
+    background: linear-gradient(
+      to bottom,
+    #c14633 0px,
+    #c14633 20%,
+    #e6ad28 20%,
+    #e6ad28 40%,
+    #7fbda3 40%,
+    #7fbda3 60%,
+    #e6ad28 60%,
+    #e6ad28 80%,
+    #c14633 80%,
+    #c14633 100%
+    );
+  }
+}

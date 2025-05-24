@@ -21,7 +21,7 @@ export default function Project({ id, thumbnail, title, description, longDescrip
                     <ul className="pt-5">
                         {icons.map((icon) => (
                             <li key={icon.iconName} className="inline">
-                                <FontAwesomeIcon icon={icon} size="2x" className="pr-3" style={{color: "#FFFFFF"}} fixedWidth/>
+                                <FontAwesomeIcon icon={icon} size="2x" className="pr-3" style={{color: "text"}} fixedWidth/>
                             </li>
                         ))}
                     </ul>

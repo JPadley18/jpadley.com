@@ -31,7 +31,7 @@ export default function Home() {
                 <meta property="og:descripton" content="Full-Stack developer. My personal portfolio website." key="og-description" />
             </Head>
 
-            <MainTitle text="JACOB PADLEY" />
+            <MainTitle text="Jacob Padley" />
 
             <AboutMeCard />
 
@@ -55,7 +55,7 @@ export default function Home() {
             links={[
                 <StatEntry key="github" icon={faGithub} text="Cordle GitHub" href="https://github.com/cordle-bot/cordle-bot" />,
                 <StatEntry key="devpost" icon={faLink} text="Hackaway Devpost Page" href="https://devpost.com/software/cordle" />,
-                <StatEntry key= "legacy-github" icon={faGithub} text="Legacy GitHub" href="https://github.com/cordle-bot/cordle-legacy" />
+                <StatEntry key="legacy-github" icon={faGithub} text="Legacy GitHub" href="https://github.com/cordle-bot/cordle-legacy" />
             ]}
             icons={[faGolang, faDocker, faNodeJs]}
             modalProps={modalProps} />
