@@ -13,7 +13,7 @@ export default function Project({ id, thumbnail, title, description, longDescrip
     return (
         <>
             <ProjectModal modalName={id} modalTitle={title} modalContent={longDescription} icons={icons} gallery={gallery} links={links} modalProps={modalProps} />
-            <div className="w-3/4 lg:w-1/2 xl:w-1/3 bg-slate-900 border border-text shadow-lg hover:scale-105 transition-transform mx-auto mt-20 rounded-lg hover:cursor-pointer" onClick={() => modalProps.setOpenModal(id)}>
+            <div className="w-3/4 lg:w-4/5 bg-slate-900 border border-text shadow-lg hover:scale-105 transition-transform mx-auto mt-20 rounded-lg hover:cursor-pointer" onClick={() => modalProps.setOpenModal(id)}>
                 <Image src={thumbnail} placeholder="blur" alt="Project photo" className="object-cover w-full h-60 rounded-t-lg" />
                 <div className="p-5">
                     <h2 className={`${orbitron.className} text-2xl sm:text-3xl font-bold`}>{title}</h2>
