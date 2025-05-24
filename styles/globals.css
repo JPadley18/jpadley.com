@@ -26,4 +26,8 @@
     #c14633 100%
     );
   }
+
+  .retro-multi-shadow {
+    text-shadow: 0.04em 0.04em 0px #c14633, 0.08em 0.08em 0px #e6ad28, 0.12em 0.12em 0px #7fbda3;
+  }
 }
