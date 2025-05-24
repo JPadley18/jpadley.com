@@ -4,7 +4,7 @@ export default function Document() {
     return (
         <Html>
             <Head />
-            <body className="h-screen overflow-x-hidden bg-fixed bg-cover bg-gradient-to-br from-slate-900 to-zinc-900 text-slate-300">
+            <body className="bg-background">
                 <Main />
                 <NextScript />
             </body>
