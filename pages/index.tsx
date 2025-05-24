@@ -17,6 +17,10 @@ import it4Carousel1 from "@/public/it4-1.png";
 import it4Carousel2 from "@/public/it4-2.png";
 import it4Carousel3 from "@/public/it4-3.png";
 import it4Carousel4 from "@/public/it4-4.png";
+import tunerCarousel1 from "@/public/tuner-1.png";
+import tunerCarousel2 from "@/public/tuner-2.png";
+import tunerCarousel3 from "@/public/tuner-3.png";
+import tunerCarousel4 from "@/public/tuner-4.png";
 import padleyThumbnail from "@/public/padley-tech-thumb.jpg"
 import turtleThumbnail from "@/public/turtle-thumb.jpg"
 import toucanThumbnail from "@/public/toucan-thumb.jpg"
@@ -80,12 +84,32 @@ export default function Home() {
             We were extremely honoured to take home 3rd place overall at Royal Hackaway V8 with this project!"
             gallery={[it4Carousel1, it4Carousel2, it4Carousel3, it4Carousel4]}
             links={[
-                <StatEntry key="legacy-github" icon={faGamepad} text="Play It Takes Two to Tango!" href="http://tango.sherv.co.uk" />,
+                <StatEntry key="play" icon={faGamepad} text="Play It Takes Two to Tango!" href="http://tango.sherv.co.uk" />,
                 <StatEntry key="github" icon={faGithub} text="It Takes Two to Tango GitHub" href="https://github.com/JPadley18/it-takes-two-to-tango" />,
                 <StatEntry key="devpost" icon={faLink} text="Hackaway Devpost Page" href="https://devpost.com/software/it-takes-two-to-tango" />,
             ]}
             icons={[faGolang, faDocker, faNodeJs, faReact]}
             modalProps={modalProps} />
+
+            <Project id="tuner" thumbnail={tunerCarousel3}
+            title="Tuner"
+            description="A real-time online quiz game that turns your most listened to Spotify tracks into a music quiz for you and your friends!"
+            longDescription="Tuner was our entry for HackSussex 2024's 24-hour Hackathon event. It is a real-time quiz game (think Kahoot) in which you and your friends log in using your Spotify account,
+            allowing Tuner to shuffle together your most listened to tunes and turn them into a musical guessing game. There are multiple rounds in which a song will play, and four options will be presented
+            that players use to try and identify the song. The player with the most correct guesses at the end wins!
+            <br>
+            During this project, I began working primarily on the back-end API service that I wrote in Go, which needed to integrate with the Spotify API in order to allow players to log in using their Spotify
+            accounts. I then worked on a system that would allow the server to look at the most played tracks of each player in the game and shuffle them together into a randomised quiz for the players to play.
+            I also worked on the Web Socket system that allowed players to play in real-time against each other and stay in sync with each other. Later in the hackathon, I moved on to working on the React front
+            end as we were struggling to get it up to speed with the rest of the project. In the end, we came out with a very well-rounded project that we were all very proud of.
+            "
+            gallery={[tunerCarousel1, tunerCarousel2, tunerCarousel3, tunerCarousel4]}
+            links={[
+                <StatEntry key="github" icon={faGithub} text="Tuner GitHub" href="https://github.com/j3-n/tuner" />,
+                <StatEntry key="devpost" icon={faLink} text="HackSussex Devpost Page" href="https://devpost.com/software/tuner-47zkyn" />,
+            ]}
+            icons={[faGolang, faDocker, faNodeJs, faReact]}
+            modalProps={modalProps} />c
 
             <Project id="padley-tech" thumbnail={padleyThumbnail}
             title="jpadley.com"
