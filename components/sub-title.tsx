@@ -1,12 +1,12 @@
-import { robotoMono } from "@/util/fonts"
+import { orbitron } from "@/util/fonts"
 
 export default function SubTitle({ text }: { text: string }) {
     return (
-        <div className="w-screen text-center">
-            <h1 className={`${robotoMono.className} text-5xl sm:text-7xl text-slate-900 inline [text-shadow:2px_2px_3px_#700000,-2px_-2px_3px_#000099]`}>&gt;&nbsp;</h1>
-            <h1 className={`${robotoMono.className} text-5xl sm:text-6xl text-slate-400 tracking-tight inline`}>
+        <div className="w-screen text-center text-5xl sm:text-6xl font-bold">
+            <h1 className={`${orbitron.className} tracking-tight inline`}>
                 {text}
             </h1>
+            <h1 className={`${orbitron.className} ml-1 animate-blink inline text-primary`}>_</h1>
         </div>
     )
 }

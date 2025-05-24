@@ -34,9 +34,7 @@ export default function Home() {
             <MainTitle text="Jacob Padley" />
 
             <AboutMeCard />
-
             <Divider />
-
             <SubTitle text="My Projects" />
 
             <Project id="cordle" thumbnail={cordleThumbnail}

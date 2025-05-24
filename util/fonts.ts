@@ -1,5 +1,10 @@
-import { Roboto_Mono } from "next/font/google"
+import { Orbitron, Ubuntu } from "next/font/google";
 
-export const robotoMono = Roboto_Mono({
+export const orbitron = Orbitron({
     subsets: ['latin'],
+});
+
+export const ubuntu = Ubuntu({
+    subsets: ['latin'],
+    weight: "400",
 });

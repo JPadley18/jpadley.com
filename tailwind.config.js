@@ -9,6 +9,17 @@ module.exports = {
     flowbite.content()
   ],
   theme: {
+    extend: {
+      keyframes: {
+        blink: {
+          '0%, 60%, 100%': { opacity: 1 },
+          '10%, 50%': { opacity: 0 },
+        },
+      },
+      animation: {
+        blink: 'blink 1.2s infinite',
+      },
+    },
     colors: {
       'text': '#40362b',
       'background': '#f7ecbf',
