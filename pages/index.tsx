@@ -6,13 +6,17 @@ import Project from "@/components/project"
 import Divider from "@/components/divider"
 import React from "react"
 import { faDocker, faGolang, faNodeJs, faRaspberryPi, faPython, faJava, faAndroid, faJs, faReact, faGithub } from "@fortawesome/free-brands-svg-icons"
-import { faLink } from "@fortawesome/free-solid-svg-icons"
+import { faLink, faGamepad } from "@fortawesome/free-solid-svg-icons"
 import StatEntry from "@/components/stat-entry"
 import Head from "next/head"
 
 import cordleThumbnail from "@/public/cordle-thumb.png"
 import cordleCarousel1 from "@/public/cordle-1.jpg"
 import cordleCarousel2 from "@/public/cordle-2.jpg"
+import it4Carousel1 from "@/public/it4-1.png";
+import it4Carousel2 from "@/public/it4-2.png";
+import it4Carousel3 from "@/public/it4-3.png";
+import it4Carousel4 from "@/public/it4-4.png";
 import padleyThumbnail from "@/public/padley-tech-thumb.jpg"
 import turtleThumbnail from "@/public/turtle-thumb.jpg"
 import toucanThumbnail from "@/public/toucan-thumb.jpg"
@@ -58,6 +62,29 @@ export default function Home() {
                 <StatEntry key="legacy-github" icon={faGithub} text="Legacy GitHub" href="https://github.com/cordle-bot/cordle-legacy" />
             ]}
             icons={[faGolang, faDocker, faNodeJs]}
+            modalProps={modalProps} />
+
+            <Project id="it4" thumbnail={it4Carousel3}
+            title="It Takes Two to Tango"
+            description="1 vs. 1 online puzzle game based on the popular LinkedIn puzzle game, Tango. It's a real-time race to see who can solve the puzzle first!"
+            longDescription="It Takes Two to Tango was our project for Royal Hackaway V8, the eighth annual 24-hour hackathon event hosted by the Royal Holloway Computing Society. The game
+            is a real-time multiplayer browser game where two players face off to try to solve a Tango puzzle the fastest. The game features a display in which you can see the progress of your
+            opponent compared to your own, which is updated in real time as you play. The first player to solve the puzzle is the winner.
+            <br>
+            The browser game was written using React, and makes use of Web Sockets to communicate with the Go back-end, which enables real-time communication to take place between players and the
+            game server. The game also features a lobby system, where players can create, view, and join public game lobbies to play against their friends.
+            <br>
+            As the team member most experienced in Go, the majority of my work on this project was on the back-end service, in which I wrote the underlying communication logic that allowed the players
+            to stay in sync with each other, as well as the logic governing the mechanics of the game, and the API that allowed the creation, viewing and joining of lobbies.
+            <br>
+            We were extremely honoured to take home 3rd place overall at Royal Hackaway V8 with this project!"
+            gallery={[it4Carousel1, it4Carousel2, it4Carousel3, it4Carousel4]}
+            links={[
+                <StatEntry key="legacy-github" icon={faGamepad} text="Play It Takes Two to Tango!" href="http://tango.sherv.co.uk" />,
+                <StatEntry key="github" icon={faGithub} text="It Takes Two to Tango GitHub" href="https://github.com/JPadley18/it-takes-two-to-tango" />,
+                <StatEntry key="devpost" icon={faLink} text="Hackaway Devpost Page" href="https://devpost.com/software/it-takes-two-to-tango" />,
+            ]}
+            icons={[faGolang, faDocker, faNodeJs, faReact]}
             modalProps={modalProps} />
 
             <Project id="padley-tech" thumbnail={padleyThumbnail}
