@@ -7,7 +7,7 @@ export default function StatEntry({ icon, text, href="" }: { icon: IconDefinitio
     let innerText: JSX.Element|string
     if(href != "") {
         // Is a link
-        innerText = <a target="_blank" rel="noopener noreferrer" className="hover:underline text-cyan-600" href={href}>{text}</a>
+        innerText = <a target="_blank" rel="noopener noreferrer" className="hover:text-primary underline text-accent" href={href}>{text}</a>
     } else {
         // Is regular text
         innerText = text
