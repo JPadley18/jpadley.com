@@ -1,4 +1,5 @@
 import MainTitle from "@/components/main-title"
+import MainSubTitle from "@/components/main-sub-title";
 import AboutMeCard from "@/components/about-me-card"
 import SubTitle from "@/components/sub-title"
 import Project from "@/components/project"
@@ -32,6 +33,7 @@ export default function Home() {
             </Head>
 
             <MainTitle text="Jacob Padley" />
+            <MainSubTitle text="Software Engineer" />
 
             <AboutMeCard />
             <Divider />
@@ -62,7 +64,7 @@ export default function Home() {
             title="jpadley.com"
             description="This website was created in TypeScript using React with Next.js and Tailwind CSS."
             longDescription="This is the very website you are currently viewing! I began work on this website both as a way to document my programming projects and 
-            to learn how to use React. This website uses React with Next.JS, as well as Tailwind CSS and Flowbite JS for styling."
+            to learn how to use React. This website uses React with Next.JS, as well as Tailwind CSS and Flowbite JS for styling. It's been through a few design iterations, there's no telling when I'll finally leave it alone!"
             gallery={[padleyThumbnail]}
             links={[
                 <StatEntry key="github" icon={faGithub} text="jpadley.com GitHub" href="https://github.com/JPadley18/jpadley.com" />
