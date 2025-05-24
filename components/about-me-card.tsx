@@ -7,12 +7,12 @@ import profileImg from "@/public/me.jpg"
 
 export default function AboutMeCard() {
     return (
-        <div className="bg-retro-stripes justify-center mt-20">
-            <div className="mx-auto w-1/2 grid grid-cols-3 bg-text rounded-full">
-                <div className="col-span-1">
-                    <Image alt="Photo of myself" placeholder="blur" src={profileImg} className="rounded-full float-left px-3 py-3" />
+        <div className="bg-retro-stripes justify-center mt-10 xl:mt-20">
+            <div className="mx-auto w-[95%] xl:w-1/2 h-full grid grid-cols-3 bg-text rounded-3xl py-5 xl:py-0 xl:rounded-full">
+                <div className="col-span-3 xl:col-span-1">
+                    <Image alt="Photo of myself" placeholder="blur" src={profileImg} className="rounded-full mx-auto xl:float-left px-3 py-3" />
                 </div>
-                <div className={`${robotoMono.className} text-white col-span-2 ml-12 flex flex-col justify-evenly`}>
+                <div className={`${robotoMono.className} text-white col-span-3 xl:col-span-2 ml-5 xl:ml-12 flex flex-col justify-evenly`}>
                     <StatEntry text="Software Engineering Intern @ IBM UK" icon={faBriefcase} />
                     <StatEntry text="Studying for Computer Science BSc (Hons)" icon={faGraduationCap} />
                     <StatEntry text="Royal Holloway University of London" icon={faBuildingColumns} />
