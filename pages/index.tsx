@@ -1,20 +1,20 @@
-import MainTitle from "@/components/main-title"
+import MainTitle from "@/components/main-title";
 import MainSubTitle from "@/components/main-sub-title";
 import AboutMeCard from "@/components/about-me-card"
-import SubTitle from "@/components/sub-title"
-import Project from "@/components/project"
+import SubTitle from "@/components/sub-title";
+import Project from "@/components/project";
 import ExperienceCard from "@/components/experience-card";
-import Divider from "@/components/divider"
-import React from "react"
-import { faDocker, faGolang, faNodeJs, faRaspberryPi, faPython, faJava, faAndroid, faJs, faReact, faGithub } from "@fortawesome/free-brands-svg-icons"
-import { faLink, faGamepad } from "@fortawesome/free-solid-svg-icons"
-import StatEntry from "@/components/stat-entry"
-import Head from "next/head"
+import Divider from "@/components/divider";
+import React from "react";
+import { faDocker, faGolang, faNodeJs, faRaspberryPi, faPython, faJava, faAndroid, faJs, faReact, faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faLink, faGamepad } from "@fortawesome/free-solid-svg-icons";
+import StatEntry from "@/components/stat-entry";
+import Head from "next/head";
 import { ubuntu } from "@/util/fonts";
 
-import cordleThumbnail from "@/public/cordle-thumb.png"
-import cordleCarousel1 from "@/public/cordle-1.jpg"
-import cordleCarousel2 from "@/public/cordle-2.jpg"
+import cordleThumbnail from "@/public/cordle-thumb.png";
+import cordleCarousel1 from "@/public/cordle-1.jpg";
+import cordleCarousel2 from "@/public/cordle-2.jpg";
 import it4Carousel1 from "@/public/it4-1.png";
 import it4Carousel2 from "@/public/it4-2.png";
 import it4Carousel3 from "@/public/it4-3.png";
@@ -23,10 +23,17 @@ import tunerCarousel1 from "@/public/tuner-1.png";
 import tunerCarousel2 from "@/public/tuner-2.png";
 import tunerCarousel3 from "@/public/tuner-3.png";
 import tunerCarousel4 from "@/public/tuner-4.png";
-import padleyThumbnail from "@/public/padley-tech-thumb.jpg"
-import turtleThumbnail from "@/public/turtle-thumb.jpg"
-import toucanThumbnail from "@/public/toucan-thumb.jpg"
-import dataikerThumbnail from "@/public/dataiker-thumb.jpg"
+import padleyThumbnail from "@/public/padley-tech-thumb.jpg";
+import turtleThumbnail from "@/public/turtle-thumb.jpg";
+import toucanThumbnail from "@/public/toucan-thumb.jpg";
+import dataikerThumbnail from "@/public/dataiker-thumb.jpg";
+
+import k8sLogo from "@/public/k8s.svg";
+import jsLogo from "@/public/js.svg";
+import perlLogo from "@/public/perl.svg";
+import mongoLogo from "@/public/mongodb.png";
+import jenkinsLogo from "@/public/jenkins.svg";
+import dockerLogo from "@/public/docker.webp";
 
 export default function Home() {
     // Track the currently open modal dialog for the page
@@ -51,8 +58,47 @@ export default function Home() {
 
             <SubTitle text="My Experience" />
 
-            <ExperienceCard company="IBM" title="Software Engineering Intern - MQ" timespan="2024 - Present" image={it4Carousel1}>
-                <p className={`${ubuntu.className}`}>hellooooo very fun yes</p>
+            <ExperienceCard company="IBM" title="Software Engineering Intern - MQ" timespan="2024 - Present" image={it4Carousel1} keySkills={[{
+                name: "Kubernetes",
+                image: k8sLogo,
+            },
+            {
+                name: "NodeJS",
+                image: jsLogo,
+            },
+            {
+                name: "Perl",
+                image: perlLogo,
+            },
+            {
+                name: "MongoDB",
+                image: mongoLogo,
+            },
+            {
+                name: "Jenkins",
+                image: jenkinsLogo,
+            },
+            {
+                name: "Docker",
+                image: dockerLogo,
+            }]}>
+                <p className={`${ubuntu.className}`}>
+                    During my 12-month internship at IBM, I took up a role in DevOps for IBM MQ. This was a role that was quite different from the experience I already had, so I saw it as a great
+                    opportunity to pick up some new skills and experiences. Keen to get the most out of the 12 months that I had there, I dove straight in to learning new things. I took on a project
+                    creating and deploying two new NodeJS microservices onto a Kubernetes cluster as part of a larger, existing application, which helped me learn a lot about Kubernetes itself and
+                    the concept of containerisation. My project involved creating new APIs, as well as utilising existing ones, and making use of messaging systems to facilitate communication between
+                    each microservice. Working on an existing codebase was also a new experience for me, having worked mostly on my own personal projects up to this point. As part of a team, I gained
+                    valuable experience in using Git and GitHub as part of a team, using proper practices such as feature branches, Pull Requests and Reviews. I then had
+                    the opportunity to tackle some work involving our automated build system, which made extensive use of Perl scripting. The scripts I worked on had to work across a huge variety
+                    of platforms, so this work gave me a better understanding of how to write cross-platform code that is reliable and fast.
+                    <br /><br />
+                    As I gained experience in the tools and processes of the team, I volunteered to take on issues that were raised for our internal tooling, which allowed me to gain confidence and
+                    experience working under more urgency, especially when the issues raised were critical. I also delivered demonstrations of features I had written, which built my valuable
+                    presentation and teamwork skills.
+                    <br /><br />
+                    Towards the end of my internship, I was offered and accepted an extension for a further year, working remotely part-time during my studies at University. I was delighted to receive
+                    this offer as I believe it reflected all of the hard work that I put in over the initial 12 months that I worked at IBM.
+                </p>
             </ExperienceCard>
 
             <Divider />
