@@ -3,12 +3,14 @@ import MainSubTitle from "@/components/main-sub-title";
 import AboutMeCard from "@/components/about-me-card"
 import SubTitle from "@/components/sub-title"
 import Project from "@/components/project"
+import ExperienceCard from "@/components/experience-card";
 import Divider from "@/components/divider"
 import React from "react"
 import { faDocker, faGolang, faNodeJs, faRaspberryPi, faPython, faJava, faAndroid, faJs, faReact, faGithub } from "@fortawesome/free-brands-svg-icons"
 import { faLink, faGamepad } from "@fortawesome/free-solid-svg-icons"
 import StatEntry from "@/components/stat-entry"
 import Head from "next/head"
+import { ubuntu } from "@/util/fonts";
 
 import cordleThumbnail from "@/public/cordle-thumb.png"
 import cordleCarousel1 from "@/public/cordle-1.jpg"
@@ -44,7 +46,17 @@ export default function Home() {
             <MainSubTitle text="Software Engineer" />
 
             <AboutMeCard />
+
             <Divider />
+
+            <SubTitle text="My Experience" />
+
+            <ExperienceCard company="IBM" title="Software Engineering Intern - MQ" timespan="2024 - Present" image={it4Carousel1}>
+                <p className={`${ubuntu.className}`}>hellooooo very fun yes</p>
+            </ExperienceCard>
+
+            <Divider />
+
             <SubTitle text="My Projects" />
 
             <div className="lg:grid lg:grid-cols-2">
