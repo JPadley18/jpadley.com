@@ -8,6 +8,7 @@ import Divider from "@/components/divider";
 import React from "react";
 import { faDocker, faGolang, faNodeJs, faRaspberryPi, faPython, faJava, faAndroid, faJs, faReact, faGithub } from "@fortawesome/free-brands-svg-icons";
 import { faLink, faGamepad } from "@fortawesome/free-solid-svg-icons";
+import { iconGodot } from "@/util/icons";
 import StatEntry from "@/components/stat-entry";
 import Head from "next/head";
 import { ubuntu } from "@/util/fonts";
@@ -15,6 +16,7 @@ import { ubuntu } from "@/util/fonts";
 import cordleThumbnail from "@/public/cordle-thumb.png";
 import cordleCarousel1 from "@/public/cordle-1.jpg";
 import cordleCarousel2 from "@/public/cordle-2.jpg";
+import placeholderThumbnail from "@/public/placeholder.jpg";
 import it4Carousel1 from "@/public/it4-1.png";
 import it4Carousel2 from "@/public/it4-2.png";
 import it4Carousel3 from "@/public/it4-3.png";
@@ -125,6 +127,26 @@ export default function Home() {
                     <StatEntry key="legacy-github" icon={faGithub} text="Legacy GitHub" href="https://github.com/cordle-bot/cordle-legacy" />
                 ]}
                 icons={[faGolang, faDocker, faNodeJs]}
+                modalProps={modalProps} />
+
+                <Project id="placeholder" thumbnail={placeholderThumbnail}
+                title="Placeholder"
+                description="The company is short-staffed and it's down to you to keep it afloat in our 2025 Hackabury entry, Placeholder!"
+                longDescription="Placeholder was our team's entry for Hackabury 2025, which took home the overall theme prize for the theme of &quot;Unity&quot;. It was each member of the team's first
+                experience making a game from start to finish, and in 24 hours every second counted.
+                <br>
+                I personally worked on the game's scripting, working entirely within Godot and scripting the game using the engine's native scripting language, GDScript. This was my first ever game jam,
+                and my first time using Godot aside from playing with it in my spare time. I learned a lot about quickly adding value to the game under pressure, and testing the game as thoroughly as
+                possible within the short time we had in order to create a solid, reliable demo of the game for judging at the end of the 24-hour hackathon. I also gained valuable experience in working with
+                other important areas of a video game, as I had to integrate assets from our team's artist and sound designer and get the whole project to mesh together smoothly.
+                <br>
+                I am incredibly proud of how well our team performed at our first game jam, and look forward to my next opportunity to work on another video game project."
+                gallery={[placeholderThumbnail]}
+                links={[
+                    <StatEntry key="github" icon={faGithub} text="Placeholder GitHub" href="https://github.com/JPadley18/hackabury-25" />,
+                    <StatEntry key="devpost" icon={faLink} text="Hackabury Devpost Page" href="https://devpost.com/software/placeholder-6gk3xb" />,
+                ]}
+                icons={[iconGodot]}
                 modalProps={modalProps} />
 
                 <Project id="it4" thumbnail={it4Carousel3}
