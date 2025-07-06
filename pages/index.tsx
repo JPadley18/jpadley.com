@@ -58,6 +58,21 @@ export default function Home() {
 
             <Divider />
 
+            <SubTitle text="About Me" />
+
+            <div className="mx-40 mt-10">
+                <p className={`${ubuntu.className}`}>
+                    Hey! My name is Jacob, and I'm a Computer Science student at Royal Holloway University of London, currently interning at IBM UK as a Software Engineer Intern. I am passionate about
+                    many fields in Computer Science, with my main interests being in back-end and full-stack systems, and occasionally video game projects. I've completed many projects in my own time,
+                    both solo and with teams. I love to attend Hackathons, and I even helped to organise my university's Hackathon in 2024, Royal Hackaway v7.
+                    <br/><br/>
+                    Outside of my work, I enjoy spending my free time playing video games and working on personal programming projects. I also have a keen interest in cars, and I like to get out of the
+                    house to attend car events, often bringing along my own 1994 Toyota MR2.
+                </p>
+            </div>
+
+            <Divider />
+
             <SubTitle text="My Experience" />
 
             <ExperienceCard company="IBM" title="Software Engineering Intern - MQ" timespan="2024 - Present" image={it4Carousel1} keySkills={[{
@@ -133,7 +148,8 @@ export default function Home() {
                 title="Placeholder"
                 description="The company is short-staffed and it's down to you to keep it afloat in our 2025 Hackabury entry, Placeholder!"
                 longDescription="Placeholder was our team's entry for Hackabury 2025, which took home the overall theme prize for the theme of &quot;Unity&quot;. It was each member of the team's first
-                experience making a game from start to finish, and in 24 hours every second counted.
+                experience making a game from start to finish, and in 24 hours every second counted. The game features a series of tasks, the quantity of which increases as you play, and the player must
+                juggle performing each task every so often in order to keep their bosses happy, and the company afloat.
                 <br>
                 I personally worked on the game's scripting, working entirely within Godot and scripting the game using the engine's native scripting language, GDScript. This was my first ever game jam,
                 and my first time using Godot aside from playing with it in my spare time. I learned a lot about quickly adding value to the game under pressure, and testing the game as thoroughly as
