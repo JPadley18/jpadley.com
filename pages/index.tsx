@@ -60,7 +60,7 @@ export default function Home() {
 
             <SubTitle text="About Me" />
 
-            <div className="mx-40 mt-10">
+            <div className="mx-5 lg:mx-40 mt-10">
                 <p className={`${ubuntu.className}`}>
                     Hey! My name is Jacob, and I'm a Computer Science student at Royal Holloway University of London, currently interning at IBM UK as a Software Engineer Intern. I am passionate about
                     many fields in Computer Science, with my main interests being in back-end and full-stack systems, and occasionally video game projects. I've completed many projects in my own time,
