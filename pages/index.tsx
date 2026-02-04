@@ -64,7 +64,7 @@ export default function Home() {
                 <p className={`${ubuntu.className}`}>
                     Hey! My name is Jacob, and I'm a Computer Science student at Royal Holloway University of London, currently interning at IBM UK as a Software Engineer Intern. I am passionate about
                     many fields in Computer Science, with my main interests being in back-end and full-stack systems, and occasionally video game projects. I've completed many projects in my own time,
-                    both solo and with teams. I love to attend Hackathons, and I even helped to organise my university's Hackathon in 2024, Royal Hackaway v7.
+                    both solo and with teams. I love to attend Hackathons, and as the President of the Royal Holloway Computing Society I even lead the organisation of my University's annual Hackathon event, Royal Hackaway v9.
                     <br/><br/>
                     Outside of my work, I enjoy spending my free time playing video games and working on personal programming projects. I also have a keen interest in cars, and I like to get out of the
                     house to attend car events, often bringing along my own 1994 Toyota MR2.
